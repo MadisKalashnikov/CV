@@ -49,3 +49,9 @@
 		display: flex;
 	}
 }
+
+@media screen and (max-width: 550px) {
+	.text__block {
+		padding-inline: 15px;
+	}
+}
