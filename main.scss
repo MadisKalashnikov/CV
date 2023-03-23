@@ -106,7 +106,7 @@ body {
 	transition: margin-left 0.5s ease, color 0.5s ease;
 
 	&:hover {
-		color: gray;
+		color: #8d5f3e;
 		margin-left: 5px;
 	}
 }
@@ -121,10 +121,6 @@ body {
 .icon {
 	height: 35px;
 	width: 35px;
-}
-
-.active {
-	color: #8d5f3e;
 }
 
 .list {
@@ -161,16 +157,31 @@ body {
 // header 
 .primary-nav {
 	padding-inline: 40px;
-	padding-block: 10px;
+	padding-block: 20px;
+	background-color: #fcfcfc;
+	text-transform: uppercase;
+	
 	.list {
 		display: flex;
 		justify-self: flex-end;
 		align-self: end;
-		column-gap: 20px;
+		column-gap: 45px;
 	}
-	
+
+	.link {
+		color: #8d5f3e;
+	}
+
 	.link:hover {
 		margin-left: 0px;
+		color: black;
+	}
+	
+	.active {
+		color: black;
+		border: 1px solid black;
+		border-radius: 10px;
+		padding: 3px 12px;
 	}
 }
 
