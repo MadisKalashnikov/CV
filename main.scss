@@ -5,6 +5,7 @@
 	box-sizing: border-box;
 	transition: padding 0.5s ease;
 }
+
 html {
 	background-color: white;
 	opacity: 1;
@@ -124,7 +125,6 @@ body {
 }
 
 .list {
-	
 	&--col {
 		display: grid;
 		margin-bottom: 20px;
