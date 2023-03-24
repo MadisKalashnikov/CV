@@ -64,7 +64,7 @@ body {
 
 .main {
 	display: grid;
-	grid-template-columns: minmax(375px, 0.85fr) minmax(400px, 1fr)
+	grid-template-columns: minmax(375px, 0.85fr) minmax(400px, 1fr);
 }
 
 .content {
@@ -117,6 +117,10 @@ body {
 	letter-spacing: 1.3px;
 	max-width: 475px;
 	line-height: 30px;
+
+	&.bold {
+		font-weight: 600;
+	}
 }
 
 .icon {
@@ -139,11 +143,6 @@ body {
 		&--styled {
 			margin-left: 25px;
 			margin-bottom: 7.5px;
-
-			& + .text {
-				margin-block: 5px;
-				font-weight: 600;
-			}
 		}
 
 		&--col {
@@ -154,7 +153,7 @@ body {
 	}
 }
 
-// header 
+// nav
 .primary-nav {
 	padding-inline: 40px;
 	padding-block: 20px;
@@ -185,17 +184,19 @@ body {
 	}
 }
 
-.header__inner {
+// hero
+
+.hero {
 	display: grid;
 	grid-template-columns: minmax(375px, 0.85fr) minmax(400px, 1fr);
-
+	grid-column: 1 / 3;
 	.block {
 		padding-inline: 40px;
 		padding-top: 40px;
 	}
 }
 
-.header__img {
+.hero__img {
 	object-fit: cover;
 	border-radius: 50%;
 	transition: width 0.5s ease, height 0.5s ease;
@@ -209,7 +210,7 @@ body {
 	color: white;
 }
 
-.header__text--sub {
+.hero__text--sub {
 	font-size: 22px;
 	color: rgba(0, 0, 0, 0.726);
 }
@@ -278,7 +279,7 @@ body {
 		font-size: 16px;
 	}
 
-	.header__text--sub {
+	.hero__text--sub {
 		font-size: 16px;
 	}
 
@@ -286,7 +287,7 @@ body {
 		font-size: 16px;
 	}
 
-	.header__img {
+	.hero__img {
 		width: 200px;
 		height: 200px;
 	}
@@ -307,10 +308,18 @@ body {
 	}
 
 	.main {
-		display: flex;
-		flex-direction: column-reverse;
+		grid-template-columns: 1fr;
 	}
-
+	.hero {
+		grid-column: 1 / 2;
+		grid-row: 1 / 2;
+	}
+	.primary {
+		grid-row: 2 / 3;
+	}
+	.secondary {
+		grid-row: 3 / 4;
+	}
 	.block {
 		padding-bottom: 20px;
 	}
@@ -332,12 +341,12 @@ body {
 		flex-direction: column-reverse;
 	}
 
-	.header__inner {
+	.hero {
 		display: flex;
 		flex-direction: column-reverse;
 	}
 
-	.header__text--sub {
+	.hero__text--sub {
 		font-size: 14px;
 	}
 
@@ -357,16 +366,16 @@ body {
 		align-items: center;
 	}
 
-	.header__inner .block {
+	.hero .block {
 		padding-inline: 0px;
 	}
 
-	.header__text--main {
+	.hero__text--main {
 		text-align: center;
 		margin-top: 15px;
 	}
 
-	.header__text--sub {
+	.hero__text--sub {
 		text-align: center;
 	}
 
