@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 		const pageToLoad = event.target.getAttribute("href")
 		const currentPage = window.location.href
-		console.log(`current page ${currentPage}, page to load ${pageToLoad}`)
+		console.log(`current page ${currentPage}, page to load ${rootPath + pageToLoad}`)
 		bodyEl.querySelector(".main").classList.add("is-animating")
 		removeActiveState()
 		event.target.classList.add("active")
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	}
 
 	const changePage = async (page) => {
-		const newPageUrl = rootPath + page
+		const newPageUrl = `${rootPath}/CV`+ page
 		const response = await fetch(newPageUrl)
 		const parser = new DOMParser()
 		const newDocument = parser.parseFromString(await response.text(), 'text/html')
