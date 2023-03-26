@@ -12,8 +12,6 @@ document.addEventListener("DOMContentLoaded", function () {
 		event.preventDefault()
 
 		const pageToLoad = event.target.getAttribute("href")
-		const currentPage = window.location.href
-		console.log(`current page ${currentPage}, page to load ${rootPath + pageToLoad}`)
 		bodyEl.querySelector(".main").classList.add("is-animating")
 		removeActiveState()
 		event.target.classList.add("active")
