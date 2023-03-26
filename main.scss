@@ -338,6 +338,7 @@ body {
 
 	.text {
 		font-size: 14px;
+		max-width: none;
 	}
 
 	.mobile--hidden {
@@ -425,7 +426,7 @@ body {
 	}
 
 	.text {
-		max-width: 1050px;
+		max-width: none;
 	}
 	
 	.text__block {
