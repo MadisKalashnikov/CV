@@ -48,9 +48,9 @@ h4 {
 // utility
 body {
 	display: grid;
+	align-items: center;
 	justify-content: center;
 	padding-inline: 15px;
-	width: 100%;
 }
 
 .desktop--hidden {
@@ -409,15 +409,23 @@ body {
 	}
 }
 
+@media screen and (max-width: 375px) {
+	body {
+		padding: 0;
+	}
+}
 
 // introduction
 .main.introduction {
-	grid-template-columns: 1fr;
+	grid-template-columns: minmax(250px, 1050px);
 	max-width: 1050px;
-	width: 100%;
 
 	.content {
 		background-color: rgb(255, 255, 255);
+	}
+
+	.text {
+		max-width: 1050px;
 	}
 	
 	.text__block {
