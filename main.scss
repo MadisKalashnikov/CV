@@ -6,14 +6,6 @@
 	transition: padding 0.5s ease;
 }
 
-html {
-	background-color: white;
-	opacity: 1;
-	background-image:  radial-gradient(#ffffff 0.5px, transparent 1px), radial-gradient(#080808 0.5px, #ffffff 0.5px);
-	background-size: 20px 20px;
-	background-position: 5px, 0px, 20px 10px;
-}
-
 h1 {
 	font-size: 62px;
 	letter-spacing: 2px;
@@ -28,7 +20,8 @@ h2 {
 	color: #8d5f3e;
 }
 
-h1, h2 {
+h1,
+h2 {
 	text-transform: uppercase;
 	font-family: "Poppins";
 }
@@ -51,6 +44,12 @@ body {
 	align-items: center;
 	justify-content: center;
 	padding-inline: 15px;
+
+	background-color: white;
+	opacity: 1;
+	background-image: radial-gradient(#ffffff 0.5px, transparent 1px), radial-gradient(#080808 0.5px, #ffffff 0.5px);
+	background-size: 20px 20px;
+	background-position: 5px, 0px, 20px 10px;
 }
 
 .desktop--hidden {
@@ -78,11 +77,11 @@ body {
 	padding-inline: 40px;
 	padding-block: 30px;
 
-	> .block:last-of-type {
+	>.block:last-of-type {
 		padding-bottom: 0px;
 	}
 
-	+ .content {
+	+.content {
 		background-color: #fcfcfc;
 		position: relative;
 	}
@@ -166,7 +165,7 @@ body {
 	padding-block: 20px;
 	background-color: #fcfcfc;
 	text-transform: uppercase;
-	
+
 	.list {
 		display: flex;
 		justify-self: flex-end;
@@ -177,13 +176,13 @@ body {
 	.link {
 		color: #8d5f3e;
 		padding: 4px 13px;
+		
+		&:hover {
+			margin-left: 0px;
+			color: black;
+		}
 	}
 
-	.link:hover {
-		margin-left: 0px;
-		color: black;
-	}
-	
 	.active {
 		color: black;
 		border: 1px solid black;
@@ -269,7 +268,7 @@ body {
 	&__right {
 		padding-left: 30px;
 	}
-	
+
 }
 
 // media queries
@@ -396,7 +395,7 @@ body {
 		display: flex;
 		flex-direction: column-reverse;
 	}
-	
+
 	.recommenders__left {
 		padding-right: 15px;
 	}
@@ -428,7 +427,7 @@ body {
 	.text {
 		max-width: none;
 	}
-	
+
 	.text__block {
 		flex-direction: row;
 		justify-content: flex-start;
@@ -438,40 +437,39 @@ body {
 		padding-inline: 40px;
 		padding-block: 35px;
 		border-bottom: 3px solid black;
-	
+
 		&-q {
 			font-family: "Poppins";
 			font-size: 72px;
 			color: black;
 		}
 	}
-	
+
 	.introduction__block {
 		display: flex;
 		flex-direction: column;
 		row-gap: 20px;
 	}
-	
+
 	.introduction__title {
 		font-size: 62px;
 		line-height: 50px;
 		color: black;
-		
+
 		&--dark {
 			color: #A57655;
 		}
 	}
-	
+
 	@media screen and (max-width: 835px) {
 		.text__block {
 			display: flex;
 		}
 	}
-	
+
 	@media screen and (max-width: 550px) {
 		.text__block {
 			padding-inline: 15px;
 		}
 	}
 }
-
